@@ -1,39 +1,35 @@
 <?php
 
-   if (isset($_FILES['file'])) {
-   		$file = $_FILES['file'];
-   		print_r('file');
+  if (isset($_FILES['video'])) {
+    $file_video = $_FILES['video'];
+    $file_name_video = $file_video['name'];
+   	$file_tmp_video = $file_video['tmp_name'];
+    
+    //$file_ext = explode('.' , $file_name);
+    
+    //$file_name_new = uniqid('', true) . '.' . $file_ext;
+    
+    $file_destination_video = 'uploads/1/' . $file_name_video;
 
-   		//File Properties
-   		$file_name = $file['name'];
-   		$file_tmp = $file['tmp_name'];
-   		$file_size = $file['size'];
-   		$file_error = $file['error'];
+    if (move_uploaded_file($file_tmp, $file_destination_video)) {
+      echo $file_destination_video;
+    }
+  }
 
-   		//Work out the file extension
-   		$file_ext = explode('.', $file_name);
-   		$file_ext = strtolower(end($file_ext));
+if (isset($_FILES['accelerometer'])) {
+    $file_accelerometer = $_FILES['accelerometer'];
+    $file_name_acceleromter = $file_accelerometer['name'];
+   	$file_tmp_accelerometer = $file_accelerometer['tmp_name'];
+    
+    //$file_ext = explode('.' , $file_name);
+    
+    //$file_name_new = uniqid('', true) . '.' . $file_ext;
+    
+    $file_destination_accelerometer = 'uploads/1/' . $file_name_accelerometer;
 
-   		$file_name_new = uniqid('', true) . '.' , $file_ext;
-
-   		$allowed = array('mp4', 'mov', 'wmv');
-
-   		if (in_array($file_ext, $allowed)) {
-   			if ($file_error === 0) {
-
-   				$file_name_new = uniqid('', true) . '.' . $file_ext;
-   				$file_destination = 'uploads/' . $file_name_new;
-
-   				if (move_uploaded_file($file_tmp, $file_destination)) {
-   					echo $file_destination;
-   				}
-
-   			} else {
-   				echo "Error";
-   			}
-   		} else {
-   			echo "Error";
-   		}
-   }
+    if (move_uploaded_file($file_tmp_accelerometer, $file_destination_accelerometer)) {
+      echo $file_destination_accelerometer;
+    }
+  }
 
 ?>
