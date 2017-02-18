@@ -13,7 +13,7 @@
    		$file_ext = explode('.', $file_name);
    		$file_ext = strtolower(end($file_ext));
 
-   		$file_name_new = uniqid('', true) . '.' , $file_ext;
+   		$file_name_new = uniqid('', true) . '.' . $file_ext;
 
    		$allowed = array('mp4', 'mov', 'wmv');
 
