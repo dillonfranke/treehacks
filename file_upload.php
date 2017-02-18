@@ -1,8 +1,6 @@
 <?php
 
-	echo "Hello";
-
-   /*if (isset($_FILES['file'])) {
+   if (isset($_FILES['file'])) {
    		$file = $_FILES['file'];
    		print_r('file');
 
@@ -13,5 +11,5 @@
 
    		//Work out the file extension
    		$file_ext = explode('.', $file_name);
-   }*/
+   }
 ?>
