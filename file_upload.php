@@ -28,7 +28,11 @@
    					echo $file_destination;
    				}
 
+   			} else {
+   				echo "Error";
    			}
+   		} else {
+   			echo "Error";
    		}
    }
 
