@@ -1,5 +1,7 @@
 <?php
 
-  echo "Test";
+  if (isset($_FILES['file'])) {
+    $file = $_FILES['file'];
+  }
 
 ?>
