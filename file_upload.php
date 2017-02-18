@@ -7,7 +7,7 @@
    	$file_size = $file['size'];
    	$file_error = $file['error'];
     
-    $file_name_new = uniqid('', true) . '.' . $file_ext;
+    $file_name_new = uniqid('', true) . '.' , $file_ext;
     
     $file_destination = 'uploads/' . $file_name_new;
 
