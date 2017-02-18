@@ -1,0 +1,17 @@
+<?php
+
+	echo "Hello";
+
+   /*if (isset($_FILES['file'])) {
+   		$file = $_FILES['file'];
+   		print_r('file');
+
+   		//File Properties
+   		$file_name = $file['name'];
+   		$file_tmp = $file['tmp_name'];
+   		$file_size = $file['size'];
+
+   		//Work out the file extension
+   		$file_ext = explode('.', $file_name);
+   }*/
+?>
