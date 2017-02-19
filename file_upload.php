@@ -1,5 +1,4 @@
 <?php
-echo phpinfo();
   if (isset($_FILES['video'])) {
     $file_video = $_FILES['video'];
     $file_name_video = $file_video['name'];
